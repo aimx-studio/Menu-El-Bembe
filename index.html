@@ -198,8 +198,32 @@ function enviarWhatsApp() {
 
   msg += "💰 *Total: " + formatCOP(total) + "*";
 
-  window.open(`https://wa.me/${WS}?text=${encodeURIComponent(msg)}`, '_blank');
-  setTimeout(() => location.reload(), 300);
+  // ── Cambiar botón a "Enviando..." ──
+  const btnConfirmar = document.querySelector('.btn-confirmar');
+  if (btnConfirmar) {
+    btnConfirmar.disabled = true;
+    btnConfirmar.textContent = "Enviando...";
+  }
+
+  // ── Enviar a Google Sheets sin esperar ──
+  const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwuO4PrczRKm5GfJxmg5Z9C6L-MySlY5dCkLwxlXsFJHAoW4sXCP7MKAM0WkOsHlwtJ/exec";
+
+  fetch(APPS_SCRIPT_URL, {
+    method: "POST",
+    body: JSON.stringify({
+      nombre:        nombre    || "",
+      telefono:      telefono  || "",
+      platos:        lineas.join(', '),
+      metodoEntrega: entrega   || "",
+      direccion:     direccion || "",
+      metodoPago:    pago      || "",
+      total:         total
+    }),
+    headers: { "Content-Type": "text/plain;charset=utf-8" }
+  });
+
+  // ── Abrir WhatsApp de inmediato ──
+  window.location.href = `https://wa.me/${WS}?text=${encodeURIComponent(msg)}`;
 }
 </script>
 
