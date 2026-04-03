@@ -223,7 +223,8 @@ function enviarWhatsApp() {
   });
 
   // ── Abrir WhatsApp de inmediato ──
-  window.location.href = `https://wa.me/${WS}?text=${encodeURIComponent(msg)}`;
+  window.open(`https://wa.me/${WS}?text=${encodeURIComponent(msg)}`, '_blank');
+setTimeout(() => { location.href = location.href; }, 300);
 }
 </script>
 
