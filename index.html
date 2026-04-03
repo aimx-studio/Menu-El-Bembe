@@ -213,7 +213,7 @@ function enviarWhatsApp() {
     body: JSON.stringify({
       nombre:        nombre    || "",
       telefono:      telefono  || "",
-      platos:        lineas.join(', '),
+      platos: lineas.join('\n'),
       metodoEntrega: entrega   || "",
       direccion:     direccion || "",
       metodoPago:    pago      || "",
