@@ -100,28 +100,28 @@ const HTML_MENUS = {
       <h2 class="section-titulo">Pizzas Enteras</h2>
       <p class="section-subtitulo">Elige tu sabor y tamaño · 30cm · 40cm · 50cm</p>
       <div class="separador">● Página 1 ●</div>
-      ${pizzaItem('jamonQueso','Jamón y Queso',24000,39000,50000)}
-      ${pizzaItem('hawaiana','Hawaiana',28000,42000,54000)}
-      ${pizzaItem('polloVegetales','Pollo Vegetales',32000,51000,62000)}
-      ${pizzaItem('polloChampinones','Pollo Champiñones',32000,51000,62000)}
-      ${pizzaItem('tocinetaCebolla','Tocineta y Cebolla Caramelizada',34000,55000,68000)}
-      ${pizzaItem('bocadilloQueso','Bocadillo y Queso',28000,44000,54000)}
-      ${pizzaItem('bocadilloQuesoTocineta','Bocadillo, Queso y Tocineta',30000,46000,56000)}
-      ${pizzaItem('polloTocineta','Pollo - Tocineta',30000,48000,60000)}
-      ${pizzaItem('quesoChampinones','Queso Champiñones',24000,39000,50000)}
-      ${pizzaItem('polloJamonTocineta','Pollo - Jamón - Tocineta',28000,46000,46000)}
+      ${pizzaItem('jamonQueso','Jamón y Queso',24000,44000,54000)}
+      ${pizzaItem('hawaiana','Hawaiana',28000,48000,58000)}
+      ${pizzaItem('polloVegetales','Pollo Vegetales',28000,48000,58000)}
+      ${pizzaItem('polloChampinones','Pollo Champiñones',28000,48000,58000)}
+      ${pizzaItem('tocinetaCebolla','Tocineta y Cebolla Caramelizada',30000,50000,60000)}
+      ${pizzaItem('bocadilloQueso','Bocadillo y Queso',25000,45000,55000)}
+      ${pizzaItem('bocadilloQuesoTocineta','Bocadillo, Queso y Tocineta',30000,50000,60000)}
+      ${pizzaItem('polloTocineta','Pollo - Tocineta',30000,50000,60000)}
+      ${pizzaItem('jamonChampinones','Jamon y Champiñones',28000,48000,58000)}
+      ${pizzaItem('polloJamonTocineta','Pollo - Jamón - Tocineta',28000,48000,58000)}
       <div class="separador">● Página 2 ●</div>
-      ${pizzaItem('soloQueso','Solo Queso',20000,31000,42000)}
-      ${pizzaItem('peperoniQueso','Peperoni y Queso',30000,48000,60000)}
-      ${pizzaItem('quesoPollo','Queso y Pollo',24000,39000,50000)}
-      ${pizzaItem('quesoJamonChamp','Queso, Jamón y Champiñones',28000,43000,54000)}
-      ${pizzaItem('quesoTocinetaMaiz','Queso, Tocineta y Maíz',32000,51000,62000)}
-      ${pizzaItem('quesoCebollaPolloTocineta','Queso, Cebolla, Pollo y Tocineta',36000,55000,68000)}
-      ${pizzaItem('quesoSalami','Queso y Salami',32000,51000,62000)}
-      ${pizzaItem('quesoVegetales','Queso y Vegetales',30000,47000,58000)}
-      ${pizzaItem('tocinetaSalamiChamp','Tocineta, Salami y Champiñones',38000,59000,74000)}
-      ${pizzaItem('jamonChorizoTocineta','Jamón, Chorizo y Tocineta',42000,61000,79000)}
-      ${pizzaItem('quesoJamonPinaTocineta','Queso, Jamón, Piña y Tocineta',34700,55000,68000)}
+      ${pizzaItem('soloQueso','Solo Queso',20000,40000,50000)}
+      ${pizzaItem('peperoniQueso','Peperoni y Queso',30000,50000,60000)}
+      ${pizzaItem('quesoPollo','Queso y Pollo',24000,44000,54000)}
+      ${pizzaItem('quesoChampinones','Queso y Champiñones',25000,45000,55000)}
+      ${pizzaItem('quesoTocinetaMaiz','Queso, Tocineta y Maíz',28000,48000,58000)}
+      ${pizzaItem('quesoCebollaPolloTocineta','Queso, Cebolla, Pollo y Tocineta',35000,55000,65000)}
+      ${pizzaItem('quesoSalami','Queso y Salami',32000,52000,62000)}
+      ${pizzaItem('quesoVegetales','Queso y Vegetales',28000,48000,58000)}
+      ${pizzaItem('tocinetaSalamiChamp','Tocineta, Salami y Champiñones',35000,55000,65000)}
+      ${pizzaItem('jamonChorizoTocineta','Jamón, Chorizo y Tocineta',35000,55000,65000)}
+      ${pizzaItem('quesoJamonPinaTocineta','Queso, Jamón, Piña y Tocineta',30000,50000,60000)}
       ${pagos()}
     </section>`,
 
@@ -166,40 +166,40 @@ const HTML_MENUS = {
     <section class="menu-section">
       <h2 class="section-titulo">Hamburguesas</h2>
       <p class="section-subtitulo">Pan artesanal · papas a la francesa · salsas artesanales</p>
-      ${item('laBembe','Hamburguesa La Bembé',28000,'150g de res, cebolla roja encurtida, pepinillos agridulces, tomate, mozzarella y tocineta ahumada.')}
-${item('polloGuarachero','Hamburguesa Pollo Guarachero',30000,'150g de pechuga molida y adobada con especias, cebolla roja encurtida, pepinillos agridulces, tomate, mozzarella y tocineta ahumada.')}
-${item('cerdoMontuno','Hamburguesa Cerdo Montuno',30000,'150g de carne molida de cerdo, cebolla roja encurtida, pepinillos agridulces, tomate, mozzarella y tocineta ahumada.')}
-${item('laChaucha','Hamburguesa La Chaucha',33000,'150g de res, chorizo mixto, cebolla roja encurtida, pepinillos agridulces, tomate, mozzarella, cheddar y tocineta ahumada.')}
-${item('laCriolla','Hamburguesa La Criolla',33000,'150g de res, huevo frito y queso costeño asado, cebolla roja encurtida, pepinillos agridulces, tomate, mozzarella, cheddar y tocineta ahumada.')}
-${itemSelect('dobleCarneOmixta','Hamburguesa Doble Carne o Mixta',39000,'300g de carne de res o mixta, cebolla roja encurtida, pepinillos agridulces, tomate, mozzarella, cheddar y tocineta ahumada.',['Doble Res','Mixta Cerdo','Mixta Pollo'],'Tipo')}
-${item('laSabrosona','Hamburguesa La Sabrosona',36000,'150g de res, queso costeño dorado, bocadillo artesanal, mozzarella, un toque de parmesano, queso crema y tocineta ahumada.')}
-${item('laMambo','Hamburguesa La Mambo',36000,'150g de res jugosa, cebolla encurtida, tomate fresco, tocineta ahumada, doble mozzarella y piña asada caramelizada.')}
+      ${item('laBembe','Hamburguesa La Bembé',25000,'150g de res, cebolla roja encurtida, pepinillos agridulces, tomate, mozzarella y tocineta ahumada.')}
+${item('polloGuarachero','Hamburguesa Pollo Guarachero',27000,'150g de pechuga molida y adobada con especias, cebolla roja encurtida, pepinillos agridulces, tomate, mozzarella y tocineta ahumada.')}
+${item('cerdoMontuno','Hamburguesa Cerdo Montuno',27000,'150g de carne molida de cerdo, cebolla roja encurtida, pepinillos agridulces, tomate, mozzarella y tocineta ahumada.')}
+${item('laChaucha','Hamburguesa La Chaucha',30000,'150g de res, chorizo mixto, cebolla roja encurtida, pepinillos agridulces, tomate, mozzarella, cheddar y tocineta ahumada.')}
+${item('laCriolla','Hamburguesa La Criolla',32000,'150g de res, huevo frito y queso costeño asado, cebolla roja encurtida, pepinillos agridulces, tomate, mozzarella, cheddar y tocineta ahumada.')}
+${itemSelect('dobleCarneOmixta','Hamburguesa Doble Carne o Mixta',36000,'300g de carne de res o mixta, cebolla roja encurtida, pepinillos agridulces, tomate, mozzarella, cheddar y tocineta ahumada.',['Doble Res','Mixta Cerdo','Mixta Pollo'],'Tipo')}
+${item('laSabrosona','Hamburguesa La Sabrosona',33000,'150g de res, queso costeño dorado, bocadillo artesanal, mozzarella, un toque de parmesano, queso crema y tocineta ahumada.')}
+${item('laMambo','Hamburguesa La Mambo',33000,'150g de res jugosa, cebolla encurtida, tomate fresco, tocineta ahumada, doble mozzarella y piña asada caramelizada.')}
 ${item('laSallita','Hamburguesa La Sallita',20000,'110g de res, cebolla roja encurtida, pepinillos agridulces, tomate, mozzarella y tocineta ahumada.')}
     </section>
 
     <section class="menu-section">
       <h2 class="section-titulo">Perros</h2>
       ${item('bongo','Perro Bongó',20000,'Salchicha americana, pan súper, chimicurri, tocineta, queso mozzarella, cebolla encurtida y pepinillos dulces.')}
-${item('chori','Perro Chori',23000,'Chorizo, pan súper, queso mozzarella, cebolla caramelizada y tocineta.')}
-${item('suizo','Perro Suizo',23000,'Salchicha suiza, pan súper, queso mozzarella, cebolla caramelizada y tocineta.')}
+${item('chori','Perro Chori',20000,'Chorizo, pan súper, queso mozzarella, cebolla caramelizada y tocineta.')}
+${item('suizo','Perro Suizo',20000,'Salchicha suiza, pan súper, queso mozzarella, cebolla caramelizada y tocineta.')}
 ${item('sencillo','Perro Sencillo',10000,'Salchicha sencilla, pan sencillo, queso mozzarella y tocineta.')}
-${item('criollo','Perro Criollo',15000,'Salchicha parrillera, pan sencillo, queso mozzarella y tocineta.')}
-${item('especial','Perro Especial',28000,'Chorizo, pan súper, tocineta y cebolla caramelizada, queso mozzarella, queso costeño y maíz.')}
-${item('perroTumbao','Perro Tumbao',33000,'Pan súper a la plancha, pollo, cerdo, carne de res, chorizo, queso mozzarella, queso costeño y tocineta.')}
+${item('criollo','Perro Criollo',15000,'Salchicha parrillera, pan sencillo, chimicurri, pepinillos dulces, queso mozzarella y tocineta.')}
+${item('especial','Perro Especial',25000,'Chorizo, pan súper, tocineta y cebolla caramelizada, queso mozzarella, queso costeño y maíz.')}
+${item('perroTumbao','Perro Tumbao',30000,'Pan súper a la plancha, pollo, cerdo, carne de res, chorizo, queso mozzarella, queso costeño y tocineta.')}
     </section>
 
     <section class="menu-section">
       <h2 class="section-titulo">Salchipapas</h2>
-      ${item('salchipapaSuiza','Salchipapa Suiza',30000,'Salchicha suiza, salchicha americana, queso mozarella, tocineta, papa francesa y salsas artesanales.')}
-      ${item('choripapa','Choripapa',30000,'Chorizo, salchicha americana, queso mozarella, tocineta, papa francesa y salsas artesanales.')}
-      ${item('salchipapaSencilla','Salchipapa Sencilla',20000,'Salchicha sencilla, queso mozarella, tocineta, papa francesa y salsas.')}
+      ${item('salchipapaSuiza','Salchipapa Suiza',25000,'Salchicha suiza, salchicha americana, queso mozarella, tocineta, papa francesa y salsas artesanales.')}
+      ${item('choripapa','Choripapa',25000,'Chorizo, salchicha americana, queso mozarella, tocineta, papa francesa y salsas artesanales.')}
+      ${item('salchipapaSencilla','Salchipapa Sencilla',15000,'Salchicha sencilla, queso mozarella, tocineta, papa francesa y salsas.')}
     </section>
 
     <section class="menu-section">
       <h2 class="section-titulo">Crocantes</h2>
-      ${item('papaCharanga','Papa Charanga',33000,'Fajitas de pollo, cerdo, res y chorizo, queso mozzarella y queso costeño, salsa especial de la casa, coco deshidratado y papas a la francesa.')}
-      ${item('desgranadoBugalu','Desgranado Bugalú',33000,'Fajitas de pollo, cerdo, res y chorizo, queso mozzarella y queso costeño, salsa especial de la casa, maíz tierno y chips de plátano.')}
-      ${item('patagonAfincao','Patacón Afincao',33000,'Fajitas de pollo, cerdo, res y chorizo, queso mozzarella y queso costeño, salsa especial de la casa, coco deshidratado y patacón crocante picado.')}
+      ${item('papaCharanga','Papa Charanga',30000,'Fajitas de pollo, cerdo, res y chorizo, queso mozzarella y queso costeño, salsa especial de la casa, coco deshidratado y papas a la francesa.')}
+      ${item('desgranadoBugalu','Desgranado Bugalú',30000,'Fajitas de pollo, cerdo, res y chorizo, queso mozzarella y queso costeño, salsa especial de la casa, maíz tierno y chips de plátano.')}
+      ${item('patagonAfincao','Patacón Afincao',30000,'Fajitas de pollo, cerdo, res y chorizo, queso mozzarella y queso costeño, salsa especial de la casa, coco deshidratado y patacón crocante picado.')}
       ${item('palitosPollo','Palitos de Pollo con Papa Francesa',20000,'Palitos de pollo apanados acompañados de papa francesa.')}
     </section>
 
@@ -228,6 +228,7 @@ ${item('perroTumbao','Perro Tumbao',33000,'Pan súper a la plancha, pollo, cerdo
       <h2 class="section-titulo">Sodas</h2>
       ${item('sodaSaborizada','Soda Saborizada',15000,'Soda + base frutal + frutas + dulces + perlas + zumo de limón + borde escarchado.')}
       ${item('sodaMichelada','Soda Michelada',12000,'Zumo de limón + soda + frutas + borde escarchado.')}
+      ${item('sodaSaborizadaAlcohol','Soda Saborizada con Alcohol',25000,'')}
     </section>
 
     <section class="menu-section">
@@ -245,8 +246,8 @@ ${item('perroTumbao','Perro Tumbao',33000,'Pan súper a la plancha, pollo, cerdo
       <h2 class="section-titulo">Cervezas</h2>
       ${item('aguilaNegra','Águila Negra',6000,'')}
       ${item('aguilaLight','Águila Light',6000,'')}
-      ${item('clubColombia','Club Colombia',8000,'')}
-      ${item('coronita','Coronita',7000,'')}
+      ${item('clubColombia','Club Colombia',7000,'')}
+      ${item('coronita','Coronita',8000,'')}
       ${item('vasoMicheladoSencillo','Vaso Michelado Sencillo',3000,'')}
       ${item('vasoMicheladoPremium','Vaso Michelado Premium',6000,'')}
       ${pagos()}
