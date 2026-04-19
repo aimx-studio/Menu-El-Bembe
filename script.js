@@ -7,27 +7,27 @@ let pedidoGlobal = [];
 // PRECIOS PIZZA (mitad y mitad)
 // ═══════════════════════════════════
 const PRECIOS_PIZZA = {
-  jamon_queso:                  { pequena:24000, mediana:39000, grande:50000 },
-  hawaiana:                     { pequena:28000, mediana:42000, grande:54000 },
-  pollo_vegetales:              { pequena:32000, mediana:51000, grande:62000 },
-  pollo_champinones:            { pequena:32000, mediana:51000, grande:62000 },
-  tocineta_cebolla:             { pequena:34000, mediana:55000, grande:68000 },
-  bocadillo_queso:              { pequena:28000, mediana:44000, grande:54000 },
-  bocadillo_queso_tocineta:     { pequena:30000, mediana:46000, grande:56000 },
-  pollo_tocineta:               { pequena:30000, mediana:48000, grande:60000 },
-  queso_champinones:            { pequena:24000, mediana:39000, grande:50000 },
-  pollo_jamon_tocineta:         { pequena:28000, mediana:46000, grande:46000 },
-  solo_queso:                   { pequena:20000, mediana:31000, grande:42000 },
-  peperoni_queso:               { pequena:30000, mediana:48000, grande:60000 },
-  queso_pollo:                  { pequena:24000, mediana:39000, grande:50000 },
-  queso_jamon_champinones:      { pequena:28000, mediana:43000, grande:54000 },
-  queso_tocineta_maiz:          { pequena:32000, mediana:51000, grande:62000 },
-  queso_cebolla_pollo_tocineta: { pequena:36000, mediana:55000, grande:68000 },
-  queso_salami:                 { pequena:32000, mediana:51000, grande:62000 },
-  queso_vegetales:              { pequena:30000, mediana:47000, grande:58000 },
-  tocineta_salami_champinones:  { pequena:38000, mediana:59000, grande:74000 },
-  jamon_chorizo_tocineta:       { pequena:42000, mediana:61000, grande:79000 },
-  queso_jamon_pina_tocineta:    { pequena:34700, mediana:55000, grande:68000 },
+  jamon_queso:                  { pequena:34000, mediana:44000, grande:54000 },
+  hawaiana:                     { pequena:38000, mediana:48000, grande:58000 },
+  pollo_vegetales:              { pequena:38000, mediana:48000, grande:58000 },
+  pollo_champinones:            { pequena:38000, mediana:48000, grande:58000 },
+  tocineta_cebolla:             { pequena:40000, mediana:50000, grande:60000 },
+  bocadillo_queso:              { pequena:35000, mediana:45000, grande:55000 },
+  bocadillo_queso_tocineta:     { pequena:40000, mediana:50000, grande:60000 },
+  pollo_tocineta:               { pequena:40000, mediana:50000, grande:60000 },
+  queso_champinones:            { pequena:35000, mediana:45000, grande:55000 },
+  pollo_jamon_tocineta:         { pequena:38000, mediana:48000, grande:58000 },
+  solo_queso:                   { pequena:30000, mediana:40000, grande:50000 },
+  peperoni_queso:               { pequena:40000, mediana:50000, grande:60000 },
+  queso_pollo:                  { pequena:34000, mediana:44000, grande:54000 },
+  queso_champinones2:           { pequena:35000, mediana:45000, grande:55000 },
+  queso_tocineta_maiz:          { pequena:38000, mediana:48000, grande:58000 },
+  queso_cebolla_pollo_tocineta: { pequena:45000, mediana:55000, grande:65000 },
+  queso_salami:                 { pequena:42000, mediana:52000, grande:62000 },
+  queso_vegetales:              { pequena:38000, mediana:48000, grande:58000 },
+  tocineta_salami_champinones:  { pequena:45000, mediana:55000, grande:65000 },
+  jamon_chorizo_tocineta:       { pequena:45000, mediana:55000, grande:65000 },
+  queso_jamon_pina_tocineta:    { pequena:40000, mediana:50000, grande:60000 },
 };
 
 const PIZZAS_OPTS = `
@@ -100,28 +100,42 @@ const HTML_MENUS = {
       <h2 class="section-titulo">Pizzas Enteras</h2>
       <p class="section-subtitulo">Elige tu sabor y tamaño · 30cm · 40cm · 50cm</p>
       <div class="separador">● Página 1 ●</div>
-      ${pizzaItem('jamonQueso','Jamón y Queso',24000,44000,54000)}
-      ${pizzaItem('hawaiana','Hawaiana',28000,48000,58000)}
-      ${pizzaItem('polloVegetales','Pollo Vegetales',28000,48000,58000)}
-      ${pizzaItem('polloChampinones','Pollo Champiñones',28000,48000,58000)}
-      ${pizzaItem('tocinetaCebolla','Tocineta y Cebolla Caramelizada',30000,50000,60000)}
-      ${pizzaItem('bocadilloQueso','Bocadillo y Queso',25000,45000,55000)}
-      ${pizzaItem('bocadilloQuesoTocineta','Bocadillo, Queso y Tocineta',30000,50000,60000)}
-      ${pizzaItem('polloTocineta','Pollo - Tocineta',30000,50000,60000)}
-      ${pizzaItem('jamonChampinones','Jamon y Champiñones',28000,48000,58000)}
-      ${pizzaItem('polloJamonTocineta','Pollo - Jamón - Tocineta',28000,48000,58000)}
+      ${pizzaItem('jamonQueso','Jamón y Queso',24000,34000,44000,54000)}
+      ${pizzaItem('hawaiana','Hawaiana',28000,38000,48000,58000)}
+      ${pizzaItem('polloVegetales','Pollo Vegetales',28000,38000,48000,58000)}
+      ${pizzaItem('polloChampinones','Pollo Champiñones',28000,38000,48000,58000)}
+      ${pizzaItem('tocinetaCebolla','Tocineta y Cebolla Caramelizada',30000,40000,50000,60000)}
+      ${pizzaItem('bocadilloQueso','Bocadillo y Queso',25000,35000,45000,55000)}
+      ${pizzaItem('bocadilloQuesoTocineta','Bocadillo, Queso y Tocineta',30000,40000,50000,60000)}
+      ${pizzaItem('polloTocineta','Pollo - Tocineta',30000,40000,50000,60000)}
+      ${pizzaItem('jamonChampinones','Jamón y Champiñones',28000,38000,48000,58000)}
+      ${pizzaItem('polloJamonTocineta','Pollo - Jamón - Tocineta',28000,38000,48000,58000)}
       <div class="separador">● Página 2 ●</div>
-      ${pizzaItem('soloQueso','Solo Queso',20000,40000,50000)}
-      ${pizzaItem('peperoniQueso','Peperoni y Queso',30000,50000,60000)}
-      ${pizzaItem('quesoPollo','Queso y Pollo',24000,44000,54000)}
-      ${pizzaItem('quesoChampinones','Queso y Champiñones',25000,45000,55000)}
-      ${pizzaItem('quesoTocinetaMaiz','Queso, Tocineta y Maíz',28000,48000,58000)}
-      ${pizzaItem('quesoCebollaPolloTocineta','Queso, Cebolla, Pollo y Tocineta',35000,55000,65000)}
-      ${pizzaItem('quesoSalami','Queso y Salami',32000,52000,62000)}
-      ${pizzaItem('quesoVegetales','Queso y Vegetales',28000,48000,58000)}
-      ${pizzaItem('tocinetaSalamiChamp','Tocineta, Salami y Champiñones',35000,55000,65000)}
-      ${pizzaItem('jamonChorizoTocineta','Jamón, Chorizo y Tocineta',35000,55000,65000)}
-      ${pizzaItem('quesoJamonPinaTocineta','Queso, Jamón, Piña y Tocineta',30000,50000,60000)}
+      ${pizzaItem('soloQueso','Solo Queso',20000,30000,40000,50000)}
+      ${pizzaItem('peperoniQueso','Peperoni y Queso',30000,40000,50000,60000)}
+      ${pizzaItem('quesoPollo','Queso y Pollo',24000,34000,44000,54000)}
+      ${pizzaItem('quesoChampinones','Queso y Champiñones',25000,35000,45000,55000)}
+      ${pizzaItem('quesoTocinetaMaiz','Queso, Tocineta y Maíz',28000,38000,48000,58000)}
+      ${pizzaItem('quesoCebollaPolloTocineta','Queso, Cebolla, Pollo y Tocineta',35000,45000,55000,65000)}
+      ${pizzaItem('quesoSalami','Queso y Salami',32000,42000,52000,62000)}
+      ${pizzaItem('quesoVegetales','Queso y Vegetales',28000,38000,48000,58000)}
+      ${pizzaItem('tocinetaSalamiChamp','Tocineta, Salami y Champiñones',35000,45000,55000,65000)}
+      ${pizzaItem('jamonChorizoTocineta','Jamón, Chorizo y Tocineta',35000,45000,55000,65000)}
+      ${pizzaItem('quesoJamonPinaTocineta','Queso, Jamón, Piña y Tocineta',30000,40000,50000,60000)}
+    </section>
+
+    <section class="menu-section">
+      <h2 class="section-titulo">Pizza por Porción</h2>
+      <p class="section-subtitulo">Ideal para un antojo rápido · precio por porción individual</p>
+      ${item('porcionHawaiana','Porción Hawaiana',8000,'')}
+      ${item('porcionJamonQueso','Porción Jamón y Queso',7000,'')}
+    </section>
+
+    <section class="menu-section">
+      <h2 class="section-titulo">Pizza por Porción</h2>
+      <p class="section-subtitulo">Ideal para un antojo rápido · precio por porción individual</p>
+      ${item('porcionHawaiana','Porción Hawaiana',8000,'')}
+      ${item('porcionJamonQueso','Porción Jamón y Queso',7000,'')}
       ${pagos()}
     </section>`,
 
@@ -166,11 +180,11 @@ const HTML_MENUS = {
     <section class="menu-section">
       <h2 class="section-titulo">Hamburguesas</h2>
       <p class="section-subtitulo">Pan artesanal · papas a la francesa · salsas artesanales</p>
-      ${item('laBembe','Hamburguesa La Bembé',25000,'150g de res, cebolla roja encurtida, pepinillos agridulces, tomate, mozzarella y tocineta ahumada.')}
-${item('polloGuarachero','Hamburguesa Pollo Guarachero',27000,'150g de pechuga molida y adobada con especias, cebolla roja encurtida, pepinillos agridulces, tomate, mozzarella y tocineta ahumada.')}
-${item('cerdoMontuno','Hamburguesa Cerdo Montuno',27000,'150g de carne molida de cerdo, cebolla roja encurtida, pepinillos agridulces, tomate, mozzarella y tocineta ahumada.')}
-${item('laChaucha','Hamburguesa La Chaucha',30000,'150g de res, chorizo mixto, cebolla roja encurtida, pepinillos agridulces, tomate, mozzarella, cheddar y tocineta ahumada.')}
-${item('laCriolla','Hamburguesa La Criolla',32000,'150g de res, huevo frito y queso costeño asado, cebolla roja encurtida, pepinillos agridulces, tomate, mozzarella, cheddar y tocineta ahumada.')}
+      ${item('laBembe','Hamburguesa La Bembé',25000,'150g de res, cebolla roja encurtida, pepinillos agridulces, tomate, queso sabanero y tocineta ahumada.')}
+${item('polloGuarachero','Hamburguesa Pollo Guarachero',27000,'150g de pechuga molida y adobada con especias, cebolla roja encurtida, pepinillos agridulces, tomate, queso sabanero y tocineta ahumada.')}
+${item('cerdoMontuno','Hamburguesa Cerdo Montuno',27000,'150g de carne molida de cerdo, cebolla roja encurtida, pepinillos agridulces, tomate, queso sabanero y tocineta ahumada.')}
+${item('laChaucha','Hamburguesa La Chaucha',30000,'150g de res, chorizo mixto, cebolla roja encurtida, pepinillos agridulces, tomate, queso sabanero y tocineta ahumada.')}
+${item('laCriolla','Hamburguesa La Criolla',32000,'150g de res, huevo frito y queso costeño asado, cebolla roja encurtida, pepinillos agridulces, tomate, queso sabanero y mozzarella.')}
 ${itemSelect('dobleCarneOmixta','Hamburguesa Doble Carne o Mixta',36000,'300g de carne de res o mixta, cebolla roja encurtida, pepinillos agridulces, tomate, mozzarella, cheddar y tocineta ahumada.',['Doble Res','Mixta Cerdo','Mixta Pollo'],'Tipo')}
 ${item('laSabrosona','Hamburguesa La Sabrosona',33000,'150g de res, queso costeño dorado, bocadillo artesanal, mozzarella, un toque de parmesano, queso crema y tocineta ahumada.')}
 ${item('laMambo','Hamburguesa La Mambo',33000,'150g de res jugosa, cebolla encurtida, tomate fresco, tocineta ahumada, doble mozzarella y piña asada caramelizada.')}
@@ -208,8 +222,20 @@ ${item('perroTumbao','Perro Tumbao',30000,'Pan súper a la plancha, pollo, cerdo
       <p class="section-subtitulo">Incluye chorizo · mazorca · papas a la francesa · chimicurri</p>
       ${item('asadoRes','Asado de Res',40000,'Asado de res acompañado de chorizo, mazorca, papas a la francesa y chimicurri.')}
       ${item('asadoPechuga','Asado de Pechuga',35000,'Pechuga a la parrilla acompañada de chorizo, mazorca, papas a la francesa y chimicurri.')}
+      </section>
+
+    <section class="menu-section">
+      <h2 class="section-titulo">Bebidas</h2>
+      ${item('botellaAgua','Botella de Agua',4000,'')}
+      ${item('gaseosaPersonal','Gaseosa Personal',6000,'')}
+      ${item('gaseosaMini','Gaseosa Mini',3000,'')}
+      ${item('gaseosa15','Gaseosa 1.5L',12000,'')}
+      ${item('gaseosa175','Gaseosa 1.75L',15000,'')}
+      ${item('sodaBretana','Soda Bretaña',6000,'')}
+      ${item('sodaHatsu','Soda Hatsu',6000,'')}
       ${pagos()}
     </section>`,
+    
 
   chiringuito: `
     <section class="menu-section">
@@ -257,7 +283,7 @@ ${item('perroTumbao','Perro Tumbao',30000,'Pan súper a la plancha, pollo, cerdo
 // ═══════════════════════════════════
 // HELPERS HTML
 // ═══════════════════════════════════
-function pizzaItem(id, nombre, p, m, g) {
+function pizzaItem(id, nombre, personal, p, m, g) {
   return `<div class="item">
     <div class="item-linea">
       <label>
@@ -266,13 +292,14 @@ function pizzaItem(id, nombre, p, m, g) {
         <span class="nombre-plato">${nombre}</span>
       </label>
       <select class="sabor" name="${id}Tamano" onchange="actualizarPrecio(this)">
+        <option value="Personal Borde de Queso 20cm" data-precio="${personal}">Personal Borde de Queso 20cm</option>
         <option value="Pequeña" data-precio="${p}">Pequeña 30cm</option>
         <option value="Mediana" data-precio="${m}">Mediana 40cm</option>
         <option value="Grande"  data-precio="${g}">Grande 50cm</option>
       </select>
-      <span class="precio">${formatCOP(p)}</span>
+      <span class="precio">${formatCOP(personal)}</span>
       <input type="number" class="cantidad" name="${id}Cantidad"
-        data-precio="${p}" value="0" min="0" onchange="calcularTotal()">
+        data-precio="${personal}" value="0" min="0" onchange="calcularTotal()">
     </div>
   </div>`;
 }
