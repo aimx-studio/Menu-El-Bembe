@@ -129,13 +129,6 @@ const HTML_MENUS = {
       <p class="section-subtitulo">Ideal para un antojo rápido · precio por porción individual</p>
       ${item('porcionHawaiana','Porción Hawaiana',8000,'')}
       ${item('porcionJamonQueso','Porción Jamón y Queso',7000,'')}
-    </section>
-
-    <section class="menu-section">
-      <h2 class="section-titulo">Pizza por Porción</h2>
-      <p class="section-subtitulo">Ideal para un antojo rápido · precio por porción individual</p>
-      ${item('porcionHawaiana','Porción Hawaiana',8000,'')}
-      ${item('porcionJamonQueso','Porción Jamón y Queso',7000,'')}
       ${pagos()}
     </section>`,
 
