@@ -377,6 +377,25 @@ function abrirMenu(tipo) {
   window.scrollTo(0, 0);
 }
 
+function restaurarPedidoGlobal() {
+  pedidoGlobal.forEach(item => {
+    const checkbox = document.querySelector(`.check-plato[value="${item.nombre}"]`);
+    if (!checkbox) return;
+    checkbox.checked = true;
+    toggleCantidad(checkbox);
+    toggleDescripcion(checkbox);
+    const linea = checkbox.closest('.item-linea');
+    const cantInput = linea.querySelector('.cantidad');
+    if (cantInput) {
+      cantInput.value = item.cant;
+      cantInput.dataset.precio = item.precio;
+    }
+    const precioSpan = linea.querySelector('.precio');
+    if (precioSpan) precioSpan.textContent = formatCOP(item.precio);
+  });
+  calcularTotal();
+}
+
 function volverPortada() {
   document.getElementById('portada').style.display = '';
   document.getElementById('menu-container').style.display = 'none';
