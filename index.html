@@ -222,10 +222,9 @@ fetch(APPS_SCRIPT_URL, {
       total:         total
     }),
     headers: { "Content-Type": "text/plain;charset=utf-8" }
-  }).finally(() => {
-    window.open(`https://wa.me/${WS}?text=${encodeURIComponent(msg)}`, '_blank');
-    setTimeout(() => { location.href = location.href; }, 300);
   });
+  window.open(`https://wa.me/${WS}?text=${encodeURIComponent(msg)}`, '_blank');
+  setTimeout(() => { location.href = location.href; }, 300);
 }
 </script>
 
