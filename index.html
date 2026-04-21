@@ -206,23 +206,36 @@ function enviarWhatsApp() {
   }
 
   // ── Enviar a Google Sheets sin esperar ──
-  const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwwbjFWZYwKlt3StA42QYjv2Ae5LoXdxYOPY0YXv7-C6-VMNSs3LLYOKx8AIjmMZkYU/exec";
+  const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwKgDqz54-CS8-L1U3sp49D2uC7inxw-CVWxYUP95yGwxpZtdiH7YINkLk6BjdVtopO/exec";
 
   
-fetch(APPS_SCRIPT_URL, {
-    method: "POST",
-    mode: "no-cors",
-    body: JSON.stringify({
-      nombre:        nombre    || "",
-      telefono:      telefono  || "",
-      platos:        lineas.join('\n'),
-      metodoEntrega: entrega   || "",
-      direccion:     direccion || "",
-      metodoPago:    pago      || "",
-      total:         total
-    }),
-    headers: { "Content-Type": "text/plain;charset=utf-8" }
-  });
+var form = document.createElement('form');
+form.method = 'POST';
+form.action = APPS_SCRIPT_URL;
+form.target = 'hidden_iframe';
+
+var input = document.createElement('input');
+input.type = 'hidden';
+input.name = 'data';
+input.value = JSON.stringify({
+  nombre:        nombre    || "",
+  telefono:      telefono  || "",
+  platos:        lineas.join('\n'),
+  metodoEntrega: entrega   || "",
+  direccion:     direccion || "",
+  metodoPago:    pago      || "",
+  total:         total
+});
+
+form.appendChild(input);
+document.body.appendChild(form);
+
+var iframe = document.createElement('iframe');
+iframe.name = 'hidden_iframe';
+iframe.style.display = 'none';
+document.body.appendChild(iframe);
+
+form.submit();
   window.open(`https://wa.me/${WS}?text=${encodeURIComponent(msg)}`, '_blank');
   setTimeout(() => { location.href = location.href; }, 300);
 }
