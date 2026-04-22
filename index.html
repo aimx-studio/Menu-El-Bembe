@@ -205,39 +205,26 @@ function enviarWhatsApp() {
     btnConfirmar.textContent = "Enviando...";
   }
 
-  // ── Enviar a Google Sheets sin esperar ──
-  const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwKgDqz54-CS8-L1U3sp49D2uC7inxw-CVWxYUP95yGwxpZtdiH7YINkLk6BjdVtopO/exec";
+  // ── Enviar a Google Forms ──
+  const formData = new FormData();
+  formData.append("entry.1374019127", nombre    || "");
+  formData.append("entry.1512792047", telefono  || "");
+  formData.append("entry.1387437886", lineas.join('\n'));
+  formData.append("entry.1736887646", entrega   || "");
+  formData.append("entry.2125605033", direccion || "");
+  formData.append("entry.1258546851", pago      || "");
+  formData.append("entry.189347138",  String(total));
 
-  
-var form = document.createElement('form');
-form.method = 'POST';
-form.action = APPS_SCRIPT_URL;
-form.target = 'hidden_iframe';
+  fetch("https://docs.google.com/forms/u/0/d/e/1FAIpQLSe2bna-9qyBoRLz5rePzkVjr_HBpRir2xsR7hR0W3sS5phgUg/formResponse", {
+    method: "POST",
+    mode: "no-cors",
+    body: formData
+  });
 
-var input = document.createElement('input');
-input.type = 'hidden';
-input.name = 'data';
-input.value = JSON.stringify({
-  nombre:        nombre    || "",
-  telefono:      telefono  || "",
-  platos:        lineas.join('\n'),
-  metodoEntrega: entrega   || "",
-  direccion:     direccion || "",
-  metodoPago:    pago      || "",
-  total:         total
-});
-
-form.appendChild(input);
-document.body.appendChild(form);
-
-var iframe = document.createElement('iframe');
-iframe.name = 'hidden_iframe';
-iframe.style.display = 'none';
-document.body.appendChild(iframe);
-
-form.submit();
-  window.open(`https://wa.me/${WS}?text=${encodeURIComponent(msg)}`, '_blank');
-  setTimeout(() => { location.href = location.href; }, 300);
+  setTimeout(() => {
+    window.open(`https://wa.me/${WS}?text=${encodeURIComponent(msg)}`, '_blank');
+    location.href = location.href;
+  }, 2000);
 }
 </script>
 
